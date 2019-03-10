@@ -1,0 +1,36 @@
+1.git config --global core.autocrlf false  //禁止自动换行
+2.git config --global user.name "liufeifei"  //设置用户名
+3.git config --global user.emal "liuff_2012@foxmail.com" //设置用户邮箱
+4.git add readme.txt //将文件添加到临时存储
+5.git diff readme.txt //查看文件修改内容
+6.git commit -m "提交修改文件到仓库"
+7.git status //查看是否有未提交文件
+8.git log //查看最近提交动作信息
+9.git log --pretty=oneline //一行显示最近提交动作信息
+10.git reset --hard head^ //将版本回退到上一版本
+11.git reset --hard head^^ //回退到上上一个版本
+12.git reset --hard head~100 //回退到前100个版本
+13. git reset --hard 版本号 //回退到某个版本
+14. git reflog //获取版本号跟操作日志
+15.工作区:电脑上看到的目录(.git目录除外) ; 版本库:.git属于版本库(存了很多东西，最重要的就是stage[暂存区]，还有第一个分支master,以及指向master的一个指针head)
+16.git checkout -- readme.txt //撤销再工作区做的修改[1.如果已经添加暂存区，则回退到与暂存区一至;2.如果未添加暂存区，则回退到当前版本]
+17.git remote add origin https://github.com/leoff/testgit.git //本地仓库跟远程仓库做关联
+18.git push -u origin master //把当前分支推送到远程master
+19.以后本地作了提交，就可以通过命令:git push origin master 进行推送远程
+20.克隆远程库 git clone https://github.com/leoff/testgit2.git
+21.git checkout dev //切换分支
+22.git branch dev //创建分支------》git branch dev 版本号[基于某个版本创建分支]
+23.git checkout -b dev //创建并切换分支
+24.git branch //查看分支
+25.git merge dev //用于合并指定分支到当前分支上
+26.git branch -d dev //删除分支
+27.git stash //隐藏工作现场
+28.git stash list //查看工作现场
+29.git stash apply恢复，然后使用git stash drop删除stash内容
+30.git stash pop 恢复同时删除
+
+27多人协作步骤
+ 1.git push origin branch-name推送自己修改
+ 2.如果推送失败，则需要git pull 合并
+ 3.解决冲突再进行推送
+
